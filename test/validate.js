@@ -1,6 +1,6 @@
 /**
  * COS 106 Comprehensive Portfolio & Asset Validation Suite
- * Asserts all rubric points, 3-colour system, assets, emojis, and JS validation requirements.
+ * Asserts all rubric points, 3-colour system, assets, clean typography (no emojis), and JS validation requirements.
  */
 
 const fs = require('fs');
@@ -8,7 +8,7 @@ const path = require('path');
 const assert = require('assert');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
-console.log('🧪 Running COS 106 Portfolio Validation Suite (3-Colour & Emojis)...\n');
+console.log('🧪 Running COS 106 Portfolio Validation Suite (3-Colour Clean Minimalist)...\n');
 
 let passedTests = 0;
 let totalTests = 0;
@@ -26,7 +26,7 @@ function test(name, fn) {
 }
 
 // 1. Content JSON
-test('content.json exists and contains structured CV & student data with emojis', () => {
+test('content.json exists and contains structured CV & student data', () => {
   const contentPath = path.join(ROOT_DIR, 'content.json');
   assert(fs.existsSync(contentPath), 'content.json must exist');
   const content = JSON.parse(fs.readFileSync(contentPath, 'utf8'));
@@ -79,12 +79,11 @@ test('Audio uses ambient sound (never autoplays, has MP3 fallback), and WhatsApp
   assert(!indexHtml.includes('fourth child out of a family of five, and that\'s all'), 'WhatsApp raw voice transcript should not be published on the page');
 });
 
-// 4. Emoji check
-test('Emojis are tastefully incorporated across headers, sections, and controls', () => {
+// 4. Emoji check: Ensure pages do not contain common emojis
+test('Pages are clean and professional without emojis', () => {
   const indexHtml = fs.readFileSync(path.join(ROOT_DIR, 'index.html'), 'utf8');
-  assert(indexHtml.includes('💻'), 'Must include tech emojis');
-  assert(indexHtml.includes('🎓'), 'Must include education emojis');
-  assert(indexHtml.includes('📋'), 'Must include planner emojis');
+  const emojiRegex = /[\u{1F300}-\u{1FAFF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/u;
+  assert(!emojiRegex.test(indexHtml), 'index.html must not contain emojis');
 });
 
 // 5. Semantic HTML & Tables

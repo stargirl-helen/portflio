@@ -205,31 +205,30 @@ class AcademicPlanner {
     if (visibleTasks.length === 0) {
       this.taskListContainer.innerHTML = `
         <div style="text-align: center; padding: 2rem; color: var(--c-text-muted); font-size: 0.95rem;">
-          <p>No academic tasks found under filter "${this.currentFilter}". 📭</p>
+          <p>No academic tasks found under filter "${this.currentFilter}".</p>
         </div>
       `;
       return;
     }
 
     this.taskListContainer.innerHTML = visibleTasks.map(task => {
-      const prioEmoji = task.priority.toLowerCase() === 'high' ? '🔴' : (task.priority.toLowerCase() === 'medium' ? '🟡' : '🟢');
       return `
         <article class="task-card ${task.completed ? 'is-done' : ''}" data-id="${task.id}">
           <div style="display: flex; align-items: center; gap: 0.85rem; flex-grow: 1;">
             <button type="button" class="check-btn" data-action="toggle" data-id="${task.id}" aria-label="${task.completed ? 'Mark task as pending' : 'Mark task as completed'}">
-              ${task.completed ? '✔' : ''}
+              ${task.completed ? '✓' : ''}
             </button>
             <div>
               <h4 class="task-title" style="font-size: 0.95rem; font-weight: 600; color: var(--c-text);">${this.escapeHTML(task.title)}</h4>
               <div class="task-meta">
                 <span class="tag">${this.escapeHTML(task.course)}</span>
-                <span>${prioEmoji} ${this.escapeHTML(task.priority)}</span>
-                <time datetime="${task.dueDate}">📅 Due: ${this.escapeHTML(task.dueDate)}</time>
+                <span>Priority: ${this.escapeHTML(task.priority)}</span>
+                <time datetime="${task.dueDate}">Due: ${this.escapeHTML(task.dueDate)}</time>
               </div>
             </div>
           </div>
           <button type="button" class="del-btn" data-action="delete" data-id="${task.id}" aria-label="Delete task: ${this.escapeHTML(task.title)}" title="Delete Task">
-            🗑️
+            Delete
           </button>
         </article>
       `;
