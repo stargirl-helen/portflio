@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Planner & Schedule | Helen Hembadoon Sawuan - COS 106</title>
+  <meta name="description" content="Interactive student task manager and academic schedule table for Helen Hembadoon Sawuan at Miva Open University.">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" aria-label="Helen Hembadoon Sawuan Home">
+        <div class="brand-logo-icon" aria-hidden="true">H</div>
+        <div class="brand-meta">
+          <span class="brand-title">Helen H. Sawuan</span>
+          <span class="brand-sub">MIVA OPEN UNIVERSITY • COS 106</span>
+        </div>
+      </a>
+      <nav id="mainNav" class="main-nav" role="navigation" aria-label="Primary navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Me</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="planner.html" class="nav-link active">Academic Planner</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" type="button" aria-label="Toggle dark/light theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+          </svg>
+        </button>
+        <button id="menuToggleBtn" class="menu-toggle-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <section class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">COS 106 Practical Requirement 4</span>
+          <h1 class="section-title">Interactive Academic Planner</h1>
+          <p class="section-subtitle">Manage coursework assignments, laboratory submissions, and study milestones in real-time with vanilla JavaScript DOM updates and local browser persistence.</p>
+        </header>
+
+        <!-- Interactive Task Management System -->
+        <div class="planner-panel">
+          <!-- Real-Time Metrics -->
+          <div class="planner-stats-bar">
+            <div class="stat-card">
+              <div id="statTotalTasks" class="stat-number">4</div>
+              <div class="stat-label">Total Course Tasks</div>
+            </div>
+            <div class="stat-card">
+              <div id="statCompletedTasks" class="stat-number" style="color: var(--accent-emerald);">1</div>
+              <div class="stat-label">Tasks Completed</div>
+            </div>
+            <div class="stat-card">
+              <div id="statPendingTasks" class="stat-number" style="color: var(--accent-amber);">3</div>
+              <div class="stat-label">Pending Deadlines</div>
+            </div>
+            <div class="stat-card">
+              <div id="statCompletionRate" class="stat-number">25%</div>
+              <div class="stat-label">Progress Rate</div>
+            </div>
+          </div>
+
+          <!-- Add Task Form -->
+          <div class="task-form-wrap">
+            <h2 class="task-form-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+              Add New Academic Task
+            </h2>
+            <form id="plannerTaskForm" class="task-form-grid" novalidate>
+              <div class="form-group">
+                <label for="taskTitleInput" class="form-label">Task / Assignment Title</label>
+                <input type="text" id="taskTitleInput" class="form-control" placeholder="e.g. Audit COS 106 Form Validation" required>
+              </div>
+
+              <div class="form-group">
+                <label for="taskCourseInput" class="form-label">Course Code</label>
+                <input type="text" id="taskCourseInput" class="form-control" placeholder="e.g. COS 106" value="COS 106">
+              </div>
+
+              <div class="form-group">
+                <label for="taskDueDateInput" class="form-label">Due Date</label>
+                <input type="date" id="taskDueDateInput" class="form-control" value="2026-11-25">
+              </div>
+
+              <div class="form-group">
+                <label for="taskPriorityInput" class="form-label">Priority</label>
+                <select id="taskPriorityInput" class="form-control">
+                  <option value="High">High</option>
+                  <option value="Medium" selected>Medium</option>
+                  <option value="Low">Low</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="height: 42px;">
+                + Add Task
+              </button>
+            </form>
+          </div>
+
+          <!-- Toolbar & Filters -->
+          <div class="planner-toolbar">
+            <div class="filter-btn-group" role="group" aria-label="Task Status Filters">
+              <button type="button" class="filter-btn active" data-filter="all">All Tasks</button>
+              <button type="button" class="filter-btn" data-filter="pending">Pending</button>
+              <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+              <button type="button" class="filter-btn" data-filter="high">High Priority</button>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted);">
+              Data synced to browser LocalStorage
+            </div>
+          </div>
+
+          <!-- Task List Container -->
+          <div id="plannerTaskList" class="task-list" role="list" aria-label="Course Task List">
+            <!-- Rendered dynamically by js/planner.js -->
+          </div>
+        </div>
+
+        <!-- Academic Schedule Table -->
+        <div style="margin-top: 4rem;">
+          <header class="section-header" style="margin-bottom: 2rem;">
+            <span class="section-tag">COS 106 HTML Tables Requirement</span>
+            <h2 class="section-title" style="font-size: 1.8rem;">Academic Course Timetable & Evaluation Breakdown</h2>
+            <p class="section-subtitle">Structured HTML tabular representation of registered coursework, credits, assessment weighting, and weekly schedule.</p>
+          </header>
+
+          <div class="table-responsive-wrapper">
+            <table class="academic-table" summary="Semester academic timetable and continuous assessment scheme">
+              <thead>
+                <tr>
+                  <th scope="col">Course Code</th>
+                  <th scope="col">Course Title</th>
+                  <th scope="col">Credits</th>
+                  <th scope="col">Assessment Breakdown</th>
+                  <th scope="col">Lecture / Lab Slot</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="course-code-badge">COS 106</span></td>
+                  <td><strong>Introduction to Web Technologies</strong></td>
+                  <td>3 Units</td>
+                  <td>Practical Term Project (20 Marks) + Final Exam (80 Marks)</td>
+                  <td>Tuesday 10:00 - 12:00</td>
+                  <td><span class="status-pill"><span class="status-dot"></span> In Progress</span></td>
+                </tr>
+                <tr>
+                  <td><span class="course-code-badge">CYB 101</span></td>
+                  <td><strong>Fundamentals of Cybersecurity</strong></td>
+                  <td>3 Units</td>
+                  <td>Lab Practicals (30 Marks) + Final Exam (70 Marks)</td>
+                  <td>Wednesday 14:00 - 16:00</td>
+                  <td><span class="status-pill"><span class="status-dot"></span> In Progress</span></td>
+                </tr>
+                <tr>
+                  <td><span class="course-code-badge">MTH 102</span></td>
+                  <td><strong>Discrete Mathematics for Computing</strong></td>
+                  <td>3 Units</td>
+                  <td>Continuous Quizzes (20 Marks) + Final Exam (80 Marks)</td>
+                  <td>Thursday 09:00 - 11:00</td>
+                  <td><span class="status-pill"><span class="status-dot"></span> In Progress</span></td>
+                </tr>
+                <tr>
+                  <td><span class="course-code-badge">GST 101</span></td>
+                  <td><strong>Use of English & Communication Skills</strong></td>
+                  <td>2 Units</td>
+                  <td>Continuous Assessment (40 Marks) + Final Exam (60 Marks)</td>
+                  <td>Friday 11:00 - 13:00</td>
+                  <td><span class="status-pill"><span class="status-dot"></span> In Progress</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand"><span style="color: var(--accent-cyan);">Helen Hembadoon Sawuan</span> • Academic Portfolio</div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Me</a>
+          <a href="projects.html">Projects</a>
+          <a href="planner.html">Academic Planner</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Helen Hembadoon Sawuan • COS 106 Term Project (20 Marks) • MIVA Open University</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/planner.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

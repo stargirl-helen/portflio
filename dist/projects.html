@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects Showcase | Helen Hembadoon Sawuan - COS 106</title>
+  <meta name="description" content="Explore cybersecurity, corporate systems, and web technology projects by Helen Hembadoon Sawuan for COS 106 at Miva Open University.">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-link" aria-label="Helen Hembadoon Sawuan Home">
+        <div class="brand-logo-icon" aria-hidden="true">H</div>
+        <div class="brand-meta">
+          <span class="brand-title">Helen H. Sawuan</span>
+          <span class="brand-sub">MIVA OPEN UNIVERSITY • COS 106</span>
+        </div>
+      </a>
+      <nav id="mainNav" class="main-nav" role="navigation" aria-label="Primary navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Me</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="planner.html" class="nav-link">Academic Planner</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" type="button" aria-label="Toggle dark/light theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+          </svg>
+        </button>
+        <button id="menuToggleBtn" class="menu-toggle-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <section class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-tag">COS 106 Requirement 3</span>
+          <h1 class="section-title">Academic & Technical Projects</h1>
+          <p class="section-subtitle">Hands-on engineering projects demonstrating practical mastery across web technologies, defensive network security, and corporate administration.</p>
+        </header>
+
+        <!-- Project 1 Deep Dive -->
+        <article class="project-card" id="proj-1" style="margin-bottom: 3rem;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; padding: 2rem;">
+            <div class="project-media-wrap" style="height: 100%; min-height: 260px; border-radius: var(--radius-md);">
+              <img src="assets/og-image.png" alt="Helen's Portfolio Platform Architecture" class="project-media-img">
+              <span class="project-badge-tag">COS 106 Term Project (20 Marks)</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div class="project-category">Web Engineering • Multi-Page Responsive Portal</div>
+              <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--text-primary);">
+                Responsive Student Portfolio & Academic Management Hub
+              </h2>
+              <p class="project-desc">
+                The primary term project for <strong>COS 106: Introduction to Web Technologies</strong> at Miva Open University. Engineered with strict adherence to semantic HTML5 markup, external CSS3 styling (Flexbox & CSS Grid), mobile-first accessibility standards, and vanilla JavaScript DOM manipulation.
+              </p>
+              <div class="project-feature-list">
+                <div class="project-feature-item">✔ <strong>Interactive Task Planner:</strong> Full CRUD-capable academic planner persisting to localStorage.</div>
+                <div class="project-feature-item">✔ <strong>Accessible Audio Console:</strong> Dual source (.ogg & .mp3 fallback) with transcript and mute state.</div>
+                <div class="project-feature-item">✔ <strong>Strict Client-Side Validation:</strong> Form input validation ensuring non-empty, email pattern, and digit-only telephone.</div>
+                <div class="project-feature-item">✔ <strong>Theme Switcher:</strong> Cyber-Ops Console (Dark) and Clean Corporate (Light) modes.</div>
+              </div>
+              <div class="project-tags">
+                <span class="tag-pill">Semantic HTML5</span>
+                <span class="tag-pill">CSS Grid</span>
+                <span class="tag-pill">CSS Flexbox</span>
+                <span class="tag-pill">Vanilla JS ES6</span>
+                <span class="tag-pill">Web Audio API</span>
+                <span class="tag-pill">LocalStorage</span>
+              </div>
+              <div class="project-footer-links">
+                <a href="planner.html" class="btn btn-primary">Open Academic Planner &rarr;</a>
+                <a href="index.html#schedule" class="btn btn-secondary">View Course Timetable Table &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 Deep Dive -->
+        <article class="project-card" id="proj-2" style="margin-bottom: 3rem;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; padding: 2rem;">
+            <div class="project-media-wrap" style="height: 100%; min-height: 260px; border-radius: var(--radius-md);">
+              <img src="assets/profile.png" alt="Corporate Vulnerability Scanner Architecture" class="project-media-img">
+              <span class="project-badge-tag">Cybersecurity Practicum</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div class="project-category">Defensive Security • Subnet Auditing</div>
+              <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--text-primary);">
+                Corporate Network Vulnerability & Port Audit Simulator
+              </h2>
+              <p class="project-desc">
+                Designed to simulate corporate security assessments, this project analyzes network ports, inspects live socket responses, captures service banners, and highlights vulnerable open services across simulated subnet environments.
+              </p>
+              <div class="project-feature-list">
+                <div class="project-feature-item">✔ <strong>Subnet Scrutiny:</strong> Detects unauthorized open management ports (e.g., Telnet, unencrypted HTTP, SMB).</div>
+                <div class="project-feature-item">✔ <strong>Banner Grabbing:</strong> Gathers daemon version strings to identify unpatched vulnerabilities.</div>
+                <div class="project-feature-item">✔ <strong>Remediation Reporting:</strong> Generates executive mitigation summaries and firewall rule recommendations.</div>
+              </div>
+              <div class="project-tags">
+                <span class="tag-pill">Python 3</span>
+                <span class="tag-pill">Socket API</span>
+                <span class="tag-pill">Network Security</span>
+                <span class="tag-pill">Audit Automation</span>
+              </div>
+              <div class="project-footer-links">
+                <a href="https://github.com/helen-sawuan/network-audit-simulator" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  Simulated GitHub Repository &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 Deep Dive -->
+        <article class="project-card" id="proj-3">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; padding: 2rem;">
+            <div class="project-media-wrap" style="height: 100%; min-height: 260px; border-radius: var(--radius-md);">
+              <img src="assets/og-image.png" alt="Secure Student Authentication Architecture" class="project-media-img">
+              <span class="project-badge-tag">Identity & Corporate Systems</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div class="project-category">Corporate Systems • Identity Access Management</div>
+              <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--text-primary);">
+                Secure Student Authentication & Verification Portal
+              </h2>
+              <p class="project-desc">
+                An interactive security-focused authentication interface modeling modern identity security. Features password entropy evaluation, strict input sanitization to guard against XSS injection, and automated token invalidation.
+              </p>
+              <div class="project-feature-list">
+                <div class="project-feature-item">✔ <strong>Entropy Meter:</strong> Calculates real-time password strength based on character sets and symbol diversity.</div>
+                <div class="project-feature-item">✔ <strong>Input Sanitization:</strong> Defensive client-side sanitization preventing HTML injection.</div>
+                <div class="project-feature-item">✔ <strong>Session Expiry:</strong> Simulates secure token handling and idle session timeouts.</div>
+              </div>
+              <div class="project-tags">
+                <span class="tag-pill">JavaScript</span>
+                <span class="tag-pill">Web Crypto</span>
+                <span class="tag-pill">IAM Fundamentals</span>
+                <span class="tag-pill">Secure Forms</span>
+              </div>
+              <div class="project-footer-links">
+                <a href="https://github.com/helen-sawuan/secure-auth-portal" target="_blank" rel="noopener noreferrer" class="link-btn">
+                  Simulated GitHub Repository &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand"><span style="color: var(--accent-cyan);">Helen Hembadoon Sawuan</span> • Academic Portfolio</div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Me</a>
+          <a href="projects.html">Projects</a>
+          <a href="planner.html">Academic Planner</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Helen Hembadoon Sawuan • COS 106 Term Project (20 Marks) • MIVA Open University</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
