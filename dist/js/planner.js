@@ -1,17 +1,14 @@
 /**
  * COS 106 Academic Planner System
- * Implements interactive task management:
- * - Add tasks with title, course code, due date, priority
- * - Mark tasks as completed / pending
- * - Delete tasks with DOM animation
- * - Status filters (All, Pending, Completed, Priority)
- * - Dynamic statistics calculation & progress tracking
+ * - Interactive task management: Add, Toggle Complete, Delete
+ * - Strict DOM manipulation, event handling, arrays and functions
+ * - Filters: All, Pending, Completed, High Priority
+ * - Live dynamic counters & progress percentage
  * - LocalStorage persistence
  */
 
 const STORAGE_KEY = 'cos106_academic_tasks_v1';
 
-// Default starter tasks derived from COS 106 syllabus
 const DEFAULT_TASKS = [
   {
     id: 1,
@@ -19,8 +16,7 @@ const DEFAULT_TASKS = [
     course: 'COS 106',
     dueDate: '2026-11-15',
     priority: 'High',
-    completed: true,
-    createdAt: new Date().toISOString()
+    completed: true
   },
   {
     id: 2,
@@ -28,8 +24,7 @@ const DEFAULT_TASKS = [
     course: 'CYB 101',
     dueDate: '2026-11-20',
     priority: 'High',
-    completed: false,
-    createdAt: new Date().toISOString()
+    completed: false
   },
   {
     id: 3,
@@ -37,8 +32,7 @@ const DEFAULT_TASKS = [
     course: 'COS 106',
     dueDate: '2026-11-22',
     priority: 'Medium',
-    completed: false,
-    createdAt: new Date().toISOString()
+    completed: false
   },
   {
     id: 4,
@@ -46,8 +40,7 @@ const DEFAULT_TASKS = [
     course: 'SYS 104',
     dueDate: '2026-11-28',
     priority: 'Low',
-    completed: false,
-    createdAt: new Date().toISOString()
+    completed: false
   }
 ];
 
@@ -89,7 +82,7 @@ class AcademicPlanner {
     this.taskPriorityInput = document.getElementById('taskPriorityInput');
     this.taskListContainer = document.getElementById('plannerTaskList');
 
-    // Stats elements
+    // Stats
     this.statTotal = document.getElementById('statTotalTasks');
     this.statCompleted = document.getElementById('statCompletedTasks');
     this.statPending = document.getElementById('statPendingTasks');
@@ -110,7 +103,7 @@ class AcademicPlanner {
 
     if (this.filterButtons) {
       this.filterButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
+        btn.addEventListener('click', () => {
           this.filterButtons.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
           this.currentFilter = btn.dataset.filter || 'all';
@@ -138,17 +131,15 @@ class AcademicPlanner {
       course,
       dueDate,
       priority,
-      completed: false,
-      createdAt: new Date().toISOString()
+      completed: false
     };
 
     this.tasks.unshift(newTask);
     this.saveTasks();
     this.render();
 
-    // Reset input fields
     if (this.taskTitleInput) this.taskTitleInput.value = '';
-    if (this.taskCourseInput) this.taskCourseInput.value = '';
+    if (this.taskCourseInput) this.taskCourseInput.value = 'COS 106';
     if (this.taskTitleInput) this.taskTitleInput.focus();
   }
 
@@ -213,37 +204,32 @@ class AcademicPlanner {
 
     if (visibleTasks.length === 0) {
       this.taskListContainer.innerHTML = `
-        <div class="empty-task-placeholder">
-          <p>No academic tasks found under filter "${this.currentFilter}".</p>
+        <div style="text-align: center; padding: 2rem; color: var(--c-text-muted); font-size: 0.95rem;">
+          <p>No academic tasks found under filter "${this.currentFilter}". 📭</p>
         </div>
       `;
       return;
     }
 
     this.taskListContainer.innerHTML = visibleTasks.map(task => {
-      const prioClass = `priority-${task.priority.toLowerCase()}`;
+      const prioEmoji = task.priority.toLowerCase() === 'high' ? '🔴' : (task.priority.toLowerCase() === 'medium' ? '🟡' : '🟢');
       return `
-        <article class="task-item ${task.completed ? 'is-completed' : ''}" data-id="${task.id}">
-          <div class="task-left-col">
-            <button type="button" class="task-checkbox-custom" data-action="toggle" data-id="${task.id}" aria-label="${task.completed ? 'Mark task as pending' : 'Mark task as completed'}">
+        <article class="task-card ${task.completed ? 'is-done' : ''}" data-id="${task.id}">
+          <div style="display: flex; align-items: center; gap: 0.85rem; flex-grow: 1;">
+            <button type="button" class="check-btn" data-action="toggle" data-id="${task.id}" aria-label="${task.completed ? 'Mark task as pending' : 'Mark task as completed'}">
               ${task.completed ? '✔' : ''}
             </button>
-            <div class="task-details">
-              <h4 class="task-title-text">${this.escapeHTML(task.title)}</h4>
-              <div class="task-meta-row">
-                <span class="course-code-badge">${this.escapeHTML(task.course)}</span>
-                <span class="priority-badge ${prioClass}">Prio: ${this.escapeHTML(task.priority)}</span>
-                <time datetime="${task.dueDate}">Due: ${this.escapeHTML(task.dueDate)}</time>
+            <div>
+              <h4 class="task-title" style="font-size: 0.95rem; font-weight: 600; color: var(--c-text);">${this.escapeHTML(task.title)}</h4>
+              <div class="task-meta">
+                <span class="tag">${this.escapeHTML(task.course)}</span>
+                <span>${prioEmoji} ${this.escapeHTML(task.priority)}</span>
+                <time datetime="${task.dueDate}">📅 Due: ${this.escapeHTML(task.dueDate)}</time>
               </div>
             </div>
           </div>
-          <button type="button" class="task-delete-btn" data-action="delete" data-id="${task.id}" aria-label="Delete task: ${this.escapeHTML(task.title)}" title="Delete Task">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="3 6 5 6 21 6"></polyline>
-              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-              <line x1="10" y1="11" x2="10" y2="17"></line>
-              <line x1="14" y1="11" x2="14" y2="17"></line>
-            </svg>
+          <button type="button" class="del-btn" data-action="delete" data-id="${task.id}" aria-label="Delete task: ${this.escapeHTML(task.title)}" title="Delete Task">
+            🗑️
           </button>
         </article>
       `;
@@ -266,7 +252,6 @@ class AcademicPlanner {
   }
 }
 
-// Instantiate planner on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('plannerTaskList')) {
     window.academicPlanner = new AcademicPlanner();

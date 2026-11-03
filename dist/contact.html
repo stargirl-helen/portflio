@@ -3,44 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Helen Hembadoon Sawuan | COS 106 Practical Form</title>
+  <title>Contact Helen Hembadoon Sawuan 📬 | COS 106 Portfolio</title>
   <meta name="description" content="Contact portal for Helen Hembadoon Sawuan with client-side JavaScript validation for COS 106 at Miva Open University.">
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <a href="#mainContent" class="skip-link">Skip to main content</a>
+  <a href="#mainContent" class="skip-link">Skip to main content 🚀</a>
+
+  <audio id="ambientAudio" preload="none">
+    <source src="assets/audio.ogg" type="audio/ogg">
+    <source src="assets/audio.mp3" type="audio/mpeg">
+  </audio>
 
   <header class="site-header" role="banner">
-    <div class="container nav-container">
-      <a href="index.html" class="brand-link" aria-label="Helen Hembadoon Sawuan Home">
-        <div class="brand-logo-icon" aria-hidden="true">H</div>
-        <div class="brand-meta">
-          <span class="brand-title">Helen H. Sawuan</span>
-          <span class="brand-sub">MIVA OPEN UNIVERSITY • COS 106</span>
-        </div>
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand" aria-label="Helen Hembadoon Sawuan Home">
+        <span class="brand-badge">COS 106</span>
+        <span>Helen H. Sawuan 💻</span>
       </a>
-      <nav id="mainNav" class="main-nav" role="navigation" aria-label="Primary navigation">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="about.html" class="nav-link">About Me</a>
-        <a href="projects.html" class="nav-link">Projects</a>
-        <a href="planner.html" class="nav-link">Academic Planner</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
+      <nav id="mainNav" class="nav-links" role="navigation" aria-label="Primary navigation">
+        <a href="index.html" class="nav-link">🏠 Home</a>
+        <a href="about.html" class="nav-link">👩‍💻 About</a>
+        <a href="projects.html" class="nav-link">💼 Projects</a>
+        <a href="planner.html" class="nav-link">📋 Planner</a>
+        <a href="contact.html" class="nav-link active">📬 Contact</a>
       </nav>
-      <div class="nav-actions">
-        <button id="themeToggleBtn" class="theme-toggle-btn" type="button" aria-label="Toggle dark/light theme">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-          </svg>
+      <div class="nav-tools">
+        <button type="button" id="audioToggleBtn" class="audio-toggle-btn" aria-label="Toggle ambient sound">
+          🔇 Sound: Off
         </button>
-        <button id="menuToggleBtn" class="menu-toggle-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
+        <button id="themeToggleBtn" class="icon-btn" type="button" aria-label="Toggle dark/light theme">
+          🌓
+        </button>
+        <button id="menuToggleBtn" class="icon-btn mobile-menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
+          ☰
         </button>
       </div>
     </div>
@@ -50,102 +47,74 @@
     <section class="section">
       <div class="container">
         <header class="section-header">
-          <span class="section-tag">COS 106 Practical Requirement 5</span>
-          <h1 class="section-title">Contact & Communications Portal</h1>
-          <p class="section-subtitle">Connect with Helen directly or transmit an encrypted message. Form validation strictly verified via JavaScript.</p>
+          <span class="section-badge">COS 106 REQUIREMENT 5</span>
+          <h1 class="section-title">Get in Touch 📬</h1>
+          <p class="section-subtitle">Reach out for academic collaboration or inquiries. Form is validated via client-side JavaScript.</p>
         </header>
 
-        <div class="contact-grid">
-          <!-- Direct Details -->
-          <div class="contact-info-stack">
-            <div class="contact-card-item">
-              <div class="contact-icon-box" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-              </div>
-              <div>
-                <div class="contact-detail-title">Student / Institutional Email</div>
-                <div class="contact-detail-value">
-                  <a href="mailto:helen.sawuan@miva.university">helen.sawuan@miva.university</a>
-                </div>
-              </div>
+        <div class="contact-layout">
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div class="card">
+              <h2 class="card-title">📧 Student Email</h2>
+              <p class="card-desc"><a href="mailto:helen.sawuan@miva.university">helen.sawuan@miva.university</a></p>
             </div>
 
-            <div class="contact-card-item">
-              <div class="contact-icon-box" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-              </div>
-              <div>
-                <div class="contact-detail-title">Telephone (Digits Only Validation)</div>
-                <div class="contact-detail-value">+234 812 345 6789</div>
-              </div>
+            <div class="card">
+              <h2 class="card-title">📱 Telephone (Digits Only)</h2>
+              <p class="card-desc">+234 812 345 6789</p>
             </div>
 
-            <div class="contact-card-item">
-              <div class="contact-icon-box" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-              </div>
-              <div>
-                <div class="contact-detail-title">Home State & University</div>
-                <div class="contact-detail-value">Benue State / MIVA Open University, Nigeria</div>
-              </div>
+            <div class="card">
+              <h2 class="card-title">📍 Location &amp; Origin</h2>
+              <p class="card-desc">Benue State / MIVA Open University, Nigeria</p>
             </div>
 
-            <div class="social-pills-row">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-pill">GitHub</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-pill">LinkedIn</a>
-              <a href="https://miva.university" target="_blank" rel="noopener noreferrer" class="social-pill">Miva Portal</a>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                💻 GitHub
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                💼 LinkedIn
+              </a>
             </div>
           </div>
 
-          <!-- Strict Validation Form -->
-          <div class="contact-form-panel">
-            <h2 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Transmit Inquiry</h2>
-            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">
-              JavaScript client-side validation enforces: (1) No field empty, (2) Valid email format, (3) Phone number contains only digits.
+          <div class="card">
+            <h2 class="card-title">✍️ Send an Inquiry</h2>
+            <p style="font-size: 0.85rem; color: var(--c-text-muted); margin-bottom: 1rem;">
+              JavaScript validation ensures: (1) No field empty, (2) Valid email, (3) Phone number contains only digits.
             </p>
 
-            <form id="contactForm" class="contact-form" novalidate>
-              <div class="form-field">
-                <label for="contactName" class="form-label">Full Name <span style="color: var(--accent-rose);">*</span></label>
-                <input type="text" id="contactName" name="name" class="form-control" placeholder="Enter your full name" required>
-                <span id="nameError" class="field-error-msg" role="alert"></span>
+            <form id="contactForm" novalidate style="display: flex; flex-direction: column; gap: 1rem;">
+              <div>
+                <label for="contactName" class="form-label">Full Name *</label>
+                <input type="text" id="contactName" class="form-input" placeholder="Your Full Name" required>
+                <span id="nameError" class="field-error" role="alert"></span>
               </div>
 
-              <div class="form-field">
-                <label for="contactEmail" class="form-label">Email Address <span style="color: var(--accent-rose);">*</span></label>
-                <input type="email" id="contactEmail" name="email" class="form-control" placeholder="name@domain.com" required>
-                <span id="emailError" class="field-error-msg" role="alert"></span>
+              <div>
+                <label for="contactEmail" class="form-label">Email Address *</label>
+                <input type="email" id="contactEmail" class="form-input" placeholder="name@domain.com" required>
+                <span id="emailError" class="field-error" role="alert"></span>
               </div>
 
-              <div class="form-field">
-                <label for="contactPhone" class="form-label">Phone Number (Digits only, min 7 digits) <span style="color: var(--accent-rose);">*</span></label>
-                <input type="tel" id="contactPhone" name="phone" class="form-control" placeholder="08123456789" required>
-                <span id="phoneError" class="field-error-msg" role="alert"></span>
+              <div>
+                <label for="contactPhone" class="form-label">Phone Number (Digits only) *</label>
+                <input type="tel" id="contactPhone" class="form-input" placeholder="08123456789" required>
+                <span id="phoneError" class="field-error" role="alert"></span>
               </div>
 
-              <div class="form-field">
-                <label for="contactMessage" class="form-label">Message <span style="color: var(--accent-rose);">*</span></label>
-                <textarea id="contactMessage" name="message" class="form-control" rows="5" placeholder="Enter your inquiry or feedback..." required></textarea>
-                <span id="messageError" class="field-error-msg" role="alert"></span>
+              <div>
+                <label for="contactMessage" class="form-label">Message *</label>
+                <textarea id="contactMessage" class="form-input" rows="4" placeholder="Your message..." required></textarea>
+                <span id="messageError" class="field-error" role="alert"></span>
               </div>
 
-              <button type="submit" id="contactSubmitBtn" class="btn btn-primary" style="width: 100%;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="22" y1="2" x2="11" y2="13"></line>
-                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                </svg>
-                Validate &amp; Transmit
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                📤 Validate &amp; Send Message
               </button>
 
-              <div id="contactFeedback" class="form-feedback-banner" role="status" aria-live="polite"></div>
+              <div id="contactFeedback" class="form-alert" role="status" aria-live="polite"></div>
             </form>
           </div>
         </div>
@@ -155,22 +124,11 @@
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand"><span style="color: var(--accent-cyan);">Helen Hembadoon Sawuan</span> • Academic Portfolio</div>
-        <nav class="footer-nav">
-          <a href="index.html">Home</a>
-          <a href="about.html">About Me</a>
-          <a href="projects.html">Projects</a>
-          <a href="planner.html">Academic Planner</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Helen Hembadoon Sawuan • COS 106 Term Project (20 Marks) • MIVA Open University</p>
-      </div>
+      <p>&copy; 2026 Helen Hembadoon Sawuan 💻 • COS 106 Term Project • MIVA Open University 🎓</p>
     </div>
   </footer>
 
+  <script src="js/audio-player.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

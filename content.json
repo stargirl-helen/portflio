@@ -1,328 +1,156 @@
 {
   "meta": {
-    "title": "Helen Hembadoon Sawuan | Cybersecurity Student & Academic Portfolio",
+    "title": "Helen Hembadoon Sawuan 💻 | Cybersecurity Student Portfolio (COS 106)",
     "description": "Personal academic portfolio, cybersecurity projects, and student management platform for Helen Hembadoon Sawuan at Miva Open University (COS 106).",
     "author": "Helen Hembadoon Sawuan",
     "keywords": "Helen Hembadoon Sawuan, Cybersecurity, Miva Open University, COS 106, Web Technologies, Portfolio, Student Academic Planner",
     "ogImage": "assets/og-image.png",
-    "favicon": "assets/favicon.ico"
+    "favicon": "assets/favicon.ico",
+    "theme": "Three-Colour Minimalist System (Base, Surface, Accent)"
   },
   "hero": {
-    "greeting": "Hello, I am",
+    "greeting": "Hi, I am",
     "name": "Helen Hembadoon Sawuan",
-    "role": "BSc Cybersecurity Student & Corporate Systems Specialist",
+    "role": "🛡️ BSc Cybersecurity Student & 🏢 Corporate Systems Specialist",
     "institution": "Miva Open University",
     "course": "COS 106: Introduction to Web Technologies",
-    "tagline": "Passionate about cyber defense, enterprise system integrity, and modern accessible web technologies. Balancing academic excellence with active corporate systems practice.",
+    "tagline": "Balancing corporate workplace operations with a rigorous cybersecurity curriculum, dedicated to defensive computing, resilient web technologies, and academic excellence. 🚀",
     "avatar": "assets/profile.png",
     "avatarWebp": "assets/profile.webp",
-    "avatarAlt": "Portrait of Helen Hembadoon Sawuan",
-    "ctaProjects": "Explore Projects",
-    "ctaPlanner": "Academic Planner",
-    "ctaContact": "Get in Touch",
+    "avatarAlt": "Portrait photograph of Helen Hembadoon Sawuan",
+    "ctaProjects": "💼 Explore Projects",
+    "ctaPlanner": "📋 Academic Planner",
+    "ctaContact": "📬 Contact Me",
     "audio": {
-      "title": "Helen's Voice Introduction",
-      "subtitle": "Recorded voice note introducing her background and cybersecurity aspirations",
-      "oggSrc": "assets/voice-intro.ogg",
-      "mp3Src": "assets/voice-intro.mp3",
-      "duration": "0:42",
-      "transcript": "My name is Helen Hembadoon Sawuan. I'm a young cybersecurity student aspiring to have one of the best careers under cybersecurity learning. I school as well as work. I'm into corporate working systems, and I have a whole lot of things that I would like to achieve as time goes on. I'm from Nigeria, middle belt region of Nigeria, under Benue State. I'm the fourth child out of a family of five, and that's all."
+      "title": "🎵 Ambient Background Sound",
+      "subtitle": "Relaxing ambient audio (toggle off by default)",
+      "oggSrc": "assets/audio.ogg",
+      "mp3Src": "assets/audio.mp3"
     }
   },
   "about": {
-    "sectionTitle": "About Me",
-    "sectionSubtitle": "Background, aspirations, and dual focus in corporate systems and cyber defense",
+    "sectionTitle": "About Me 👩‍💻",
+    "sectionSubtitle": "Bridging corporate operations with academic cybersecurity studies at MIVA Open University.",
     "bioParagraphs": [
-      "I am an ambitious cybersecurity undergraduate at Miva Open University with a deep focus on enterprise security, information systems, and secure web application development. Simultaneously engaged in academics and corporate workplace operations, I specialize in understanding system architectures, threat surfaces, and digital workflows.",
-      "Originating from Benue State in the Middle Belt region of Nigeria, I bring discipline, analytical curiosity, and resilience to every technical challenge. My mission is to build a top-tier career in cybersecurity, protecting modern organizations against evolving threats while engineering resilient, accessible digital tools."
+      "I am an energetic cybersecurity undergraduate at MIVA Open University. Concurrently working in corporate operational systems, I manage day-to-day computing workflows while studying modern web architecture and cyber defense. 💻",
+      "Originating from Benue State in Nigeria's Middle Belt region, I am the fourth of five children in my family. That background built my steadfast discipline, curiosity, and problem-solving focus. 📍"
     ],
     "highlights": [
-      {
-        "label": "Degree Track",
-        "value": "BSc Cybersecurity"
-      },
-      {
-        "label": "Institution",
-        "value": "Miva Open University"
-      },
-      {
-        "label": "Focus Area",
-        "value": "Cyber Defense & Web Tech"
-      },
-      {
-        "label": "Work-Study",
-        "value": "Corporate Operations & Systems"
-      },
-      {
-        "label": "Origin",
-        "value": "Benue State, Nigeria"
-      },
-      {
-        "label": "Academic Status",
-        "value": "Active Student (COS 106)"
-      }
+      { "label": "Degree Track 🎓", "value": "BSc Cybersecurity" },
+      { "label": "University 🏛️", "value": "Miva Open University" },
+      { "label": "Work-Study 🏢", "value": "Corporate Operations & Systems" },
+      { "label": "Origin 📍", "value": "Benue State, Nigeria" }
     ],
     "careerAspirations": {
-      "title": "Career Aspirations",
+      "title": "Career Aspirations 🎯",
       "points": [
-        "Achieve leadership excellence as an enterprise Cybersecurity & Systems Defense Specialist.",
-        "Design, audit, and safeguard mission-critical corporate computing infrastructure against intrusion.",
-        "Promote secure software engineering practices and human-centered cyber awareness within corporate organizations.",
-        "Continuously advance technical certifications in SOC operations, penetration testing, and cloud security."
+        "🛡️ Attain leadership standing as an enterprise Information Security & Cyber Defense Architect.",
+        "🏢 Harden corporate IT infrastructure against sophisticated cyber attacks and intrusions.",
+        "🔐 Implement secure development workflows and client-side data protections.",
+        "📜 Acquire global credentials: CompTIA Security+, CEH, and CISSP."
       ]
     },
     "hobbies": [
-      { "name": "Cyber Labs & CTF Challenges", "icon": "shield-lock" },
-      { "name": "Corporate Tech Exploration", "icon": "cpu" },
-      { "name": "Reading & Technical Research", "icon": "book-open" },
-      { "name": "Community & Family Engagement", "icon": "users" }
+      { "name": "🛡️ Ethical Hacking Labs" },
+      { "name": "💻 Corporate IT Trends" },
+      { "name": "📚 Tech Research & Reading" },
+      { "name": "🌐 Web Development" },
+      { "name": "🎧 Focus & Ambient Music" },
+      { "name": "👨‍👩‍👧‍👦 Family & Community" }
     ]
   },
   "skills": {
-    "sectionTitle": "Technical Skills & Competencies",
-    "sectionSubtitle": "Core competencies demonstrated across web technologies and cybersecurity coursework",
+    "sectionTitle": "Technical Skills ⚡",
     "categories": [
       {
-        "name": "Web Technologies (COS 106)",
+        "name": "🌐 Web Technologies (COS 106)",
         "skills": [
           { "name": "Semantic HTML5", "level": "Advanced", "percent": 95 },
-          { "name": "CSS3 / Flexbox & CSS Grid", "level": "Advanced", "percent": 90 },
+          { "name": "CSS3 Grid & Flexbox", "level": "Advanced", "percent": 90 },
           { "name": "JavaScript (DOM & Events)", "level": "Intermediate", "percent": 85 },
-          { "name": "Responsive & Mobile-First Design", "level": "Advanced", "percent": 92 },
-          { "name": "Client-Side Form Validation", "level": "Advanced", "percent": 88 }
+          { "name": "Client Form Validation (RegEx)", "level": "Advanced", "percent": 88 }
         ]
       },
       {
-        "name": "Cybersecurity & Systems",
+        "name": "🔒 Cybersecurity & Systems",
         "skills": [
-          { "name": "Information Security Fundamentals", "level": "Proficient", "percent": 85 },
-          { "name": "Network Protocols (TCP/IP, DNS, HTTPS)", "level": "Proficient", "percent": 82 },
-          { "name": "Corporate Systems Administration", "level": "Experienced", "percent": 88 },
-          { "name": "Vulnerability Assessment Basics", "level": "Intermediate", "percent": 75 },
-          { "name": "Identity & Access Management (IAM)", "level": "Intermediate", "percent": 78 }
+          { "name": "InfoSec Fundamentals", "level": "Proficient", "percent": 85 },
+          { "name": "TCP/IP & Network Protocols", "level": "Proficient", "percent": 82 },
+          { "name": "Corporate Systems Admin", "level": "Experienced", "percent": 88 },
+          { "name": "Access Control & IAM", "level": "Intermediate", "percent": 78 }
         ]
       },
       {
-        "name": "Professional & Developer Tools",
+        "name": "🛠️ Engineering & a11y",
         "skills": [
+          { "name": "Web Accessibility (WCAG 2.1)", "level": "Proficient", "percent": 90 },
           { "name": "Git & GitHub Version Control", "level": "Proficient", "percent": 84 },
-          { "name": "Web Accessibility (WCAG / a11y)", "level": "Proficient", "percent": 90 },
-          { "name": "Browser DevTools & Performance Audit", "level": "Advanced", "percent": 86 },
-          { "name": "Technical Documentation & Reporting", "level": "Advanced", "percent": 90 }
+          { "name": "Browser DevTools & Auditing", "level": "Advanced", "percent": 86 },
+          { "name": "HTML Data Tables", "level": "Advanced", "percent": 92 }
         ]
       }
     ]
   },
   "projects": {
-    "sectionTitle": "Featured Projects",
-    "sectionSubtitle": "Academic projects and practical systems development completed at Miva Open University",
+    "sectionTitle": "Featured Projects 💼",
     "items": [
       {
         "id": "proj-1",
-        "title": "Responsive Student Portfolio & Academic Management Hub",
-        "badge": "COS 106 Term Project (20 Marks)",
+        "title": "📱 Student Portfolio & Planner Platform",
+        "badge": "🏆 COS 106 Term Project (20 Marks)",
         "category": "Web Technology",
-        "description": "Comprehensive responsive multi-page academic portfolio complying with all COS 106 requirements: semantic HTML5, custom CSS styling with Flexbox/Grid, accessible multimedia audio player with local storage, and full interactive task planner.",
+        "description": "The COS 106 practical term project featuring a responsive multi-page layout, 3-colour minimalist styling, ambient sound controls, and a complete DOM-driven task management system.",
         "image": "assets/og-image.png",
-        "techStack": ["HTML5", "CSS3 Grid/Flexbox", "JavaScript ES6", "Web Audio API", "LocalStorage"],
-        "features": [
-          "Interactive task management with persistent local storage",
-          "Audio voice intro player with .ogg/.mp3 dual source & mute controls",
-          "Full client-side form validation with regex pattern matching",
-          "Accessible semantic layout with dark/cyber and light mode switcher"
-        ],
-        "demoLink": "#",
+        "techStack": ["HTML5", "CSS3", "JavaScript", "LocalStorage"],
+        "demoLink": "planner.html",
         "codeLink": "https://github.com/helen-sawuan/cos106-portfolio"
       },
       {
         "id": "proj-2",
-        "title": "Corporate Network Vulnerability & Port Audit Simulator",
-        "badge": "Cybersecurity Practicum",
+        "title": "🔍 Corporate Network Vulnerability Scanner",
+        "badge": "🛡️ Cybersecurity Lab Practicum",
         "category": "Security Engineering",
-        "description": "Simulation and auditing platform demonstrating corporate security assessment workflows: subnet scanning, port mapping, identifying exposed service banners, and generating hardening recommendations for enterprise networks.",
+        "description": "Automated subnet scanner and port analyzer modeling corporate security audits, service banner identification, and defensive remediation reports.",
         "image": "assets/profile.png",
-        "techStack": ["Python", "Socket Programming", "Bash Scripting", "Security Auditing"],
-        "features": [
-          "TCP SYN/Connect port scanning simulations",
-          "Service banner grabbing & CVE cross-reference lookup",
-          "Risk categorization dashboard (Low / Medium / High / Critical)",
-          "Audit summary report generation in markdown & JSON formats"
-        ],
-        "demoLink": "#",
+        "techStack": ["Python", "Sockets", "Security Audit"],
+        "demoLink": "#proj-2",
         "codeLink": "https://github.com/helen-sawuan/network-audit-simulator"
       },
       {
         "id": "proj-3",
-        "title": "Secure Student Authentication & Verification Portal",
-        "badge": "Systems & Identity",
+        "title": "🔐 Secure Authentication Portal Prototype",
+        "badge": "🔐 Identity & Access Management",
         "category": "Corporate Systems",
-        "description": "Interactive web security prototype focusing on input sanitization, multi-factor credential simulation, entropy scoring for student passwords, and defensive DOM manipulation against cross-site scripting (XSS).",
-        "image": "assets/profile.png",
-        "techStack": ["HTML5 Form API", "JavaScript", "Web Crypto API", "CSS Grid"],
-        "features": [
-          "Client-side password entropy evaluator with real-time feedback",
-          "Strict input sanitization and regex validation rules",
-          "Simulated session token management and automatic expiration",
-          "Comprehensive audit log viewer of authentication events"
-        ],
-        "demoLink": "#",
+        "description": "Interactive authentication prototype demonstrating client-side password entropy scoring, input sanitization against XSS, and session timeouts.",
+        "image": "assets/og-image.png",
+        "techStack": ["JavaScript", "Web Crypto", "Input Sanitization"],
+        "demoLink": "#proj-3",
         "codeLink": "https://github.com/helen-sawuan/secure-auth-portal"
       }
     ]
   },
   "planner": {
-    "sectionTitle": "Interactive Academic Planner",
-    "sectionSubtitle": "Required COS 106 practical component for managing coursework, deadlines, and study activities",
-    "description": "Plan, track, and complete academic tasks with real-time DOM manipulation and persistent storage.",
+    "sectionTitle": "Interactive Academic Planner 📋",
     "defaultTasks": [
-      {
-        "id": 1,
-        "title": "Complete COS 106 Term Project Portfolio Website",
-        "course": "COS 106",
-        "dueDate": "2026-11-15",
-        "priority": "High",
-        "completed": true
-      },
-      {
-        "id": 2,
-        "title": "Review Cyber Defense Architecture & Network Models",
-        "course": "CYB 102",
-        "dueDate": "2026-11-20",
-        "priority": "High",
-        "completed": false
-      },
-      {
-        "id": 3,
-        "title": "Validate HTML Semantic Tags and WCAG 2.1 Accessibility",
-        "course": "COS 106",
-        "dueDate": "2026-11-22",
-        "priority": "Medium",
-        "completed": false
-      },
-      {
-        "id": 4,
-        "title": "Corporate Systems Audit Log Analysis Practicum",
-        "course": "SYS 104",
-        "dueDate": "2026-11-28",
-        "priority": "Medium",
-        "completed": false
-      }
+      { "id": 1, "title": "Complete COS 106 Term Project Portfolio Website", "course": "COS 106", "dueDate": "2026-11-15", "priority": "High", "completed": true },
+      { "id": 2, "title": "Review Cyber Defense Architecture & Network Models", "course": "CYB 101", "dueDate": "2026-11-20", "priority": "High", "completed": false },
+      { "id": 3, "title": "Validate HTML Semantic Tags and WCAG 2.1 Accessibility", "course": "COS 106", "dueDate": "2026-11-22", "priority": "Medium", "completed": false },
+      { "id": 4, "title": "Corporate Systems Audit Log Analysis Practicum", "course": "SYS 104", "dueDate": "2026-11-28", "priority": "Low", "completed": false }
     ]
   },
   "timetable": {
-    "sectionTitle": "Academic Coursework & Assessment Schedule",
-    "sectionSubtitle": "Demonstration of structured HTML tables with responsive styling and semester breakdown",
+    "sectionTitle": "Academic Course Timetable & Assessment Table 📅",
     "courses": [
-      {
-        "code": "COS 106",
-        "title": "Introduction to Web Technologies",
-        "credits": 3,
-        "assessment": "Practical Term Project (20 Marks) + Exam (80 Marks)",
-        "dayTime": "Tuesday 10:00 - 12:00",
-        "status": "In Progress"
-      },
-      {
-        "code": "CYB 101",
-        "title": "Fundamentals of Cybersecurity",
-        "credits": 3,
-        "assessment": "Lab Assignments (30 Marks) + Exam (70 Marks)",
-        "dayTime": "Wednesday 14:00 - 16:00",
-        "status": "In Progress"
-      },
-      {
-        "code": "MTH 102",
-        "title": "Discrete Mathematics for Computing",
-        "credits": 3,
-        "assessment": "Quizzes (20 Marks) + Midterm & Exam (80 Marks)",
-        "dayTime": "Thursday 09:00 - 11:00",
-        "status": "In Progress"
-      },
-      {
-        "code": "GST 101",
-        "title": "Use of English & Communication Skills",
-        "credits": 2,
-        "assessment": "Continuous Assessment (40 Marks) + Exam (60 Marks)",
-        "dayTime": "Friday 11:00 - 13:00",
-        "status": "In Progress"
-      }
-    ]
-  },
-  "education": {
-    "sectionTitle": "Education & Academic Background",
-    "sectionSubtitle": "Academic journey and institutional milestones",
-    "items": [
-      {
-        "degree": "Bachelor of Science (BSc) in Cybersecurity",
-        "institution": "Miva Open University",
-        "period": "2024 - Present",
-        "location": "Abuja / Distance Learning, Nigeria",
-        "status": "Currently Enrolled",
-        "description": "Specializing in information assurance, secure network communications, operating system security, and modern web application technologies (COS 106). Maintaining active corporate working integration alongside degree coursework."
-      },
-      {
-        "degree": "Senior Secondary School Certificate (SSCE)",
-        "institution": "Benue State Secondary Education",
-        "period": "Completed",
-        "location": "Benue State, Nigeria",
-        "status": "Graduated",
-        "description": "Excellence in Sciences and Mathematics with foundational training in computing and computer appreciation."
-      }
-    ]
-  },
-  "experience": {
-    "sectionTitle": "Professional Experience & Certifications",
-    "sectionSubtitle": "Corporate engagement, technical training, and credential milestones",
-    "items": [
-      {
-        "role": "Corporate Operations & Systems Specialist",
-        "organization": "Corporate Working Systems",
-        "period": "Current / Ongoing",
-        "location": "Nigeria",
-        "type": "Professional",
-        "bullets": [
-          "Manage day-to-day corporate operating workflows, digital system communications, and user workstation security.",
-          "Coordinate corporate compliance checks, file access controls, and procedural information integrity.",
-          "Interface between business processes and technical computing support teams."
-        ]
-      },
-      {
-        "role": "COS 106 Practical Web Engineering Certification",
-        "organization": "Miva Open University",
-        "period": "2025 - 2026",
-        "location": "Academic",
-        "type": "Certification",
-        "bullets": [
-          "Demonstrated competency in semantic HTML5 markup, external CSS3 styling (Flexbox/Grid), and vanilla JavaScript DOM manipulation.",
-          "Constructed responsive multi-page academic portfolio and interactive student planner system meeting all faculty term requirements."
-        ]
-      },
-      {
-        "role": "Cybersecurity Fundamentals & Network Defense Trainee",
-        "organization": "Cyber Learning Track",
-        "period": "2025 - Present",
-        "location": "Online / Practicum",
-        "type": "Certification",
-        "bullets": [
-          "Hands-on study of network defense principles, TCP/IP threat vectors, malware mitigation, and defensive firewall configuration."
-        ]
-      }
+      { "code": "COS 106", "title": "Introduction to Web Technologies 💻", "credits": 3, "assessment": "Practical Term Project (20 Marks) + Final Exam (80 Marks)", "dayTime": "Tuesday 10:00 - 12:00", "status": "Enrolled 🟢" },
+      { "code": "CYB 101", "title": "Fundamentals of Cybersecurity 🛡️", "credits": 3, "assessment": "Lab Practicals (30 Marks) + Final Exam (70 Marks)", "dayTime": "Wednesday 14:00 - 16:00", "status": "Enrolled 🟢" },
+      { "code": "MTH 102", "title": "Discrete Mathematics for Computing 📐", "credits": 3, "assessment": "Quizzes (20 Marks) + Final Exam (80 Marks)", "dayTime": "Thursday 09:00 - 11:00", "status": "Enrolled 🟢" },
+      { "code": "GST 101", "title": "Use of English & Communication 📖", "credits": 2, "assessment": "Continuous Assessment (40 Marks) + Exam (60 Marks)", "dayTime": "Friday 11:00 - 13:00", "status": "Enrolled 🟢" }
     ]
   },
   "contact": {
-    "sectionTitle": "Contact Me",
-    "sectionSubtitle": "Connect for academic inquiries, cybersecurity collaboration, or corporate systems consulting",
+    "sectionTitle": "Get in Touch 📬",
     "email": "helen.sawuan@miva.university",
     "phone": "+234 812 345 6789",
-    "location": "Benue State / Miva Open University, Nigeria",
-    "formInstructions": "Send a direct message through the form below. Client-side validation verifies that all fields are populated, email conforms to standard format, and telephone contains numeric digits only.",
-    "socials": [
-      { "name": "GitHub", "url": "https://github.com", "handle": "helen-sawuan" },
-      { "name": "LinkedIn", "url": "https://linkedin.com", "handle": "Helen Hembadoon Sawuan" },
-      { "name": "Miva Portal", "url": "https://miva.university", "handle": "Student ID: COS-2025" }
-    ]
-  },
-  "footer": {
-    "copyright": "© 2026 Helen Hembadoon Sawuan. Designed for COS 106 practical term evaluation at MIVA Open University.",
-    "note": "Built with Semantic HTML5, CSS3 Grid/Flexbox & Vanilla JavaScript. All requirements strictly implemented."
+    "location": "Benue State / MIVA Open University, Nigeria"
   }
 }

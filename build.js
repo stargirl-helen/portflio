@@ -10,9 +10,9 @@ const path = require('path');
 const ROOT_DIR = __dirname;
 const DIST_DIR = path.join(ROOT_DIR, 'dist');
 
-console.log('🚀 Starting static production build...');
+console.log('🚀 Starting static production build (3-Colour System)...');
 
-// 1. Verify required source assets
+// Required source assets
 const requiredAssets = [
   'content.json',
   'index.html',
@@ -26,8 +26,8 @@ const requiredAssets = [
   'js/planner.js',
   'assets/profile.png',
   'assets/profile.webp',
-  'assets/voice-intro.ogg',
-  'assets/voice-intro.mp3',
+  'assets/audio.ogg',
+  'assets/audio.mp3',
   'assets/favicon.ico',
   'assets/favicon.png',
   'assets/og-image.png',
@@ -48,7 +48,7 @@ if (missingCount > 0) {
   process.exit(1);
 }
 
-// 2. Prepare dist/
+// Prepare dist/
 if (fs.existsSync(DIST_DIR)) {
   fs.rmSync(DIST_DIR, { recursive: true, force: true });
 }
@@ -57,7 +57,6 @@ fs.mkdirSync(path.join(DIST_DIR, 'css'), { recursive: true });
 fs.mkdirSync(path.join(DIST_DIR, 'js'), { recursive: true });
 fs.mkdirSync(path.join(DIST_DIR, 'assets'), { recursive: true });
 
-// 3. Helper to copy directory contents
 function copyDir(src, dest) {
   if (!fs.existsSync(src)) return;
   const entries = fs.readdirSync(src, { withFileTypes: true });
@@ -73,13 +72,11 @@ function copyDir(src, dest) {
   }
 }
 
-// 4. Copy files
-console.log('📦 Copying assets and stylesheets to dist/...');
+console.log('📦 Copying assets, pages, and stylesheets to dist/...');
 copyDir(path.join(ROOT_DIR, 'assets'), path.join(DIST_DIR, 'assets'));
 copyDir(path.join(ROOT_DIR, 'css'), path.join(DIST_DIR, 'css'));
 copyDir(path.join(ROOT_DIR, 'js'), path.join(DIST_DIR, 'js'));
 
-// Copy root files
 const rootFiles = ['index.html', 'about.html', 'projects.html', 'planner.html', 'contact.html', 'content.json'];
 for (const f of rootFiles) {
   const src = path.join(ROOT_DIR, f);
@@ -90,7 +87,6 @@ for (const f of rootFiles) {
 }
 
 console.log('✨ Build succeeded! Production bundle created at dist/');
-console.log(`📊 Output items in dist/:`);
 const distItems = fs.readdirSync(DIST_DIR);
 distItems.forEach(item => console.log(`   - ${item}`));
-console.log('\nReady for deployment to GitHub Pages, Vercel, or Netlify!\n');
+console.log('\nReady for deployment to GitHub Pages or Vercel!\n');
