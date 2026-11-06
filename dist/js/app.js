@@ -27,9 +27,8 @@ function initThemeToggle() {
   const THEME_KEY = 'cos106_portal_theme';
   const savedTheme = localStorage.getItem(THEME_KEY);
 
-  // Check saved theme or system preference
-  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'dark'); // Default to Cyber Dark per aesthetic
+  // Default to clean Light Theme (White, Pink, Yellow Accent)
+  const initialTheme = savedTheme || 'light';
 
   applyTheme(initialTheme);
 
