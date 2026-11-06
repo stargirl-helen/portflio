@@ -11,7 +11,7 @@ const ROOT_DIR = __dirname;
 const DIST_DIR = path.join(ROOT_DIR, 'dist');
 const PUBLIC_DIR = path.join(ROOT_DIR, 'public');
 
-console.log('🚀 Starting static production build (3-Colour System)...');
+console.log('Starting static production build (3-Colour System)...');
 
 // Required source assets
 const requiredAssets = [
@@ -39,7 +39,7 @@ let missingCount = 0;
 for (const file of requiredAssets) {
   const fullPath = path.join(ROOT_DIR, file);
   if (!fs.existsSync(fullPath)) {
-    console.error(`❌ Missing required file: ${file}`);
+    console.error(`Missing required file: ${file}`);
     missingCount++;
   }
 }
@@ -73,10 +73,6 @@ function buildToDirectory(targetDir) {
   fs.mkdirSync(path.join(targetDir, 'js'), { recursive: true });
   fs.mkdirSync(path.join(targetDir, 'assets'), { recursive: true });
 
-  copyDir(path.join(ROOT_DIR, 'assets'), path.join(targetDir, 'assets'));
-  copyDir(path.join(ROOT_DIR, 'css'), path.join(targetDir, 'css'));
-  copyDir(path.join(ROOT_DIR, 'js'), path.join(targetDir, 'js'));
-
   const rootFiles = ['index.html', 'about.html', 'projects.html', 'planner.html', 'contact.html', 'content.json'];
   for (const f of rootFiles) {
     const src = path.join(ROOT_DIR, f);
@@ -85,13 +81,19 @@ function buildToDirectory(targetDir) {
       fs.copyFileSync(src, dest);
     }
   }
+
+  copyDir(path.join(ROOT_DIR, 'assets'), path.join(targetDir, 'assets'));
+  copyDir(path.join(ROOT_DIR, 'css'), path.join(targetDir, 'css'));
+  copyDir(path.join(ROOT_DIR, 'js'), path.join(targetDir, 'js'));
 }
 
-console.log('📦 Generating dist/ directory...');
+console.log('Generating dist/ directory...');
 buildToDirectory(DIST_DIR);
 
-console.log('📦 Generating public/ directory (Vercel static fallback)...');
+console.log('Generating public/ directory (Vercel static fallback)...');
 buildToDirectory(PUBLIC_DIR);
 
-console.log('✨ Build succeeded! Production bundles created at dist/ and public/');
+console.log('Build succeeded! Production bundles created at dist/ and public/');
+const distItems = fs.readdirSync(DIST_DIR);
+distItems.forEach(item => console.log(`   - ${item}`));
 console.log('\nReady for deployment to GitHub Pages or Vercel!\n');
