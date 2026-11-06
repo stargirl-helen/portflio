@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Planner &amp; Schedule | Helen Hembadoon Sawuan - COS 106</title>
+  <meta name="description" content="Interactive student academic task manager and course timetable table for Helen Hembadoon Sawuan at Miva Open University.">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <audio id="ambientAudio" preload="none">
+    <source src="assets/audio.ogg" type="audio/ogg">
+    <source src="assets/audio.mp3" type="audio/mpeg">
+  </audio>
+
+  <header class="site-header" role="banner">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand" aria-label="Helen Hembadoon Sawuan Home">
+        <span class="brand-badge">COS 106</span>
+        <span>Helen H. Sawuan</span>
+      </a>
+      <nav id="mainNav" class="nav-links" role="navigation" aria-label="Primary navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="planner.html" class="nav-link active">Planner</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-tools">
+        <button type="button" id="audioToggleBtn" class="audio-toggle-btn" aria-label="Toggle ambient sound">
+          Sound: Off
+        </button>
+        <button id="themeToggleBtn" class="icon-btn" type="button" aria-label="Toggle dark/light theme">
+          Theme
+        </button>
+        <button id="menuToggleBtn" class="icon-btn mobile-menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
+          Menu
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <section class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-badge">COS 106 REQUIREMENT 4</span>
+          <h1 class="section-title">Interactive Academic Planner</h1>
+          <p class="section-subtitle">Manage assignments, deadlines, and study tasks with real-time DOM updates and browser storage.</p>
+        </header>
+
+        <div class="planner-box">
+          <!-- Real-Time Metrics -->
+          <div class="stats-bar">
+            <div class="stat-item">
+              <div id="statTotalTasks" class="stat-val">4</div>
+              <div class="stat-name">Total Tasks</div>
+            </div>
+            <div class="stat-item">
+              <div id="statCompletedTasks" class="stat-val">1</div>
+              <div class="stat-name">Completed</div>
+            </div>
+            <div class="stat-item">
+              <div id="statPendingTasks" class="stat-val">3</div>
+              <div class="stat-name">Pending</div>
+            </div>
+            <div class="stat-item">
+              <div id="statCompletionRate" class="stat-val">25%</div>
+              <div class="stat-name">Progress</div>
+            </div>
+          </div>
+
+          <!-- Add Task Form -->
+          <form id="plannerTaskForm" class="planner-form" novalidate>
+            <div class="planner-form-grid">
+              <div>
+                <label for="taskTitleInput" class="form-label">Task / Assignment Title</label>
+                <input type="text" id="taskTitleInput" class="form-input" placeholder="e.g. Complete COS 106 HTML Validation" required>
+              </div>
+
+              <div>
+                <label for="taskCourseInput" class="form-label">Course Code</label>
+                <input type="text" id="taskCourseInput" class="form-input" value="COS 106">
+              </div>
+
+              <div>
+                <label for="taskDueDateInput" class="form-label">Due Date</label>
+                <input type="date" id="taskDueDateInput" class="form-input" value="2026-11-20">
+              </div>
+
+              <div>
+                <label for="taskPriorityInput" class="form-label">Priority</label>
+                <select id="taskPriorityInput" class="form-input">
+                  <option value="High">High</option>
+                  <option value="Medium" selected>Medium</option>
+                  <option value="Low">Low</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="height: 38px;">
+                Add Task
+              </button>
+            </div>
+          </form>
+
+          <!-- Filter Toolbar -->
+          <div class="filter-row">
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button type="button" class="filter-btn active" data-filter="all">All Tasks</button>
+              <button type="button" class="filter-btn" data-filter="pending">Pending</button>
+              <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+              <button type="button" class="filter-btn" data-filter="high">High Priority</button>
+            </div>
+            <div style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--c-text-muted);">
+              Saved to Browser LocalStorage
+            </div>
+          </div>
+
+          <!-- Dynamic Task List -->
+          <div id="plannerTaskList" class="task-list" role="list" aria-label="Course Task List">
+            <!-- Rendered by js/planner.js -->
+          </div>
+        </div>
+
+        <!-- Academic Schedule Table -->
+        <div style="margin-top: 3.5rem;">
+          <header class="section-header" style="margin-bottom: 1.5rem;">
+            <span class="section-badge">COS 106 HTML TABLES REQUIREMENT</span>
+            <h2 class="section-title" style="font-size: 1.6rem;">Academic Course Timetable &amp; Continuous Assessment Table</h2>
+            <p class="section-subtitle">Official semester timetable, course units, and continuous assessment breakdown.</p>
+          </header>
+
+          <div class="table-wrap">
+            <table summary="Registered course schedule and continuous assessment weighting">
+              <thead>
+                <tr>
+                  <th scope="col">Code</th>
+                  <th scope="col">Course Title</th>
+                  <th scope="col">Credits</th>
+                  <th scope="col">Assessment Breakdown</th>
+                  <th scope="col">Lecture Slot</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>COS 106</strong></td>
+                  <td>Introduction to Web Technologies</td>
+                  <td>3 Units</td>
+                  <td>Practical Term Project (20 Marks) + Final Exam (80 Marks)</td>
+                  <td>Tuesday 10:00 - 12:00</td>
+                  <td>Enrolled</td>
+                </tr>
+                <tr>
+                  <td><strong>CYB 101</strong></td>
+                  <td>Fundamentals of Cybersecurity</td>
+                  <td>3 Units</td>
+                  <td>Lab Practicals (30 Marks) + Final Exam (70 Marks)</td>
+                  <td>Wednesday 14:00 - 16:00</td>
+                  <td>Enrolled</td>
+                </tr>
+                <tr>
+                  <td><strong>MTH 102</strong></td>
+                  <td>Discrete Mathematics for Computing</td>
+                  <td>3 Units</td>
+                  <td>Quizzes (20 Marks) + Final Exam (80 Marks)</td>
+                  <td>Thursday 09:00 - 11:00</td>
+                  <td>Enrolled</td>
+                </tr>
+                <tr>
+                  <td><strong>GST 101</strong></td>
+                  <td>Use of English &amp; Communication</td>
+                  <td>2 Units</td>
+                  <td>Continuous Assessment (40 Marks) + Exam (60 Marks)</td>
+                  <td>Friday 11:00 - 13:00</td>
+                  <td>Enrolled</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; 2026 Helen Hembadoon Sawuan • COS 106 Term Project • MIVA Open University</p>
+    </div>
+  </footer>
+
+  <script src="js/audio-player.js"></script>
+  <script src="js/planner.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

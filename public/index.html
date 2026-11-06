@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helen Hembadoon Sawuan | Cybersecurity Student Portfolio (COS 106)</title>
+  <meta name="description" content="Personal academic portfolio, cybersecurity projects, and student management platform for Helen Hembadoon Sawuan at Miva Open University (COS 106).">
+  <meta name="author" content="Helen Hembadoon Sawuan">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Helen Hembadoon Sawuan | Cybersecurity Student Portfolio">
+  <meta property="og:description" content="Academic portfolio and student planner for COS 106 at Miva Open University.">
+  <meta property="og:image" content="assets/og-image.png">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="assets/apple-touch-icon.png">
+
+  <!-- External Stylesheet (3-Colour System) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Keyboard Accessible Skip Link -->
+  <a href="#mainContent" class="skip-link">Skip to main content</a>
+
+  <!-- Ambient Audio Track -->
+  <audio id="ambientAudio" preload="none">
+    <source src="assets/audio.ogg" type="audio/ogg">
+    <source src="assets/audio.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Global Header -->
+  <header class="site-header" role="banner">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand" aria-label="Helen Hembadoon Sawuan Home">
+        <span class="brand-badge">COS 106</span>
+        <span>Helen H. Sawuan</span>
+      </a>
+
+      <!-- Primary Navigation -->
+      <nav id="mainNav" class="nav-links" role="navigation" aria-label="Primary navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="planner.html" class="nav-link">Planner</a>
+        <a href="#schedule" class="nav-link">Timetable</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Tools: Ambient Sound & Theme Switcher -->
+      <div class="nav-tools">
+        <button type="button" id="audioToggleBtn" class="audio-toggle-btn" aria-label="Toggle ambient sound">
+          Sound: Off
+        </button>
+
+        <button id="themeToggleBtn" class="icon-btn" type="button" aria-label="Toggle dark/light theme" title="Toggle Theme">
+          Theme
+        </button>
+
+        <button id="menuToggleBtn" class="icon-btn mobile-menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mainNav">
+          Menu
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="mainContent">
+
+    <!-- 1. HERO SECTION -->
+    <section class="section" id="hero" aria-labelledby="heroTitle">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <div>
+            <span class="section-badge">MIVA OPEN UNIVERSITY • COS 106 TERM PROJECT</span>
+          </div>
+
+          <h1 id="heroTitle" class="hero-title">
+            Hi, I am <span>Helen Hembadoon</span> Sawuan
+          </h1>
+
+          <p class="hero-role">
+            BSc Cybersecurity Student &amp; Corporate Systems Specialist
+          </p>
+
+          <p class="hero-bio">
+            Welcome to my official academic portfolio and student management platform for <strong>COS 106: Introduction to Web Technologies</strong>. Balancing corporate workplace operations with a rigorous cybersecurity curriculum, dedicated to defensive computing, resilient web technologies, and academic excellence.
+          </p>
+
+          <div class="hero-actions">
+            <a href="projects.html" class="btn btn-primary">
+              Explore Projects &rarr;
+            </a>
+            <a href="planner.html" class="btn btn-secondary">
+              Academic Planner &rarr;
+            </a>
+            <a href="contact.html" class="btn btn-secondary">
+              Contact Me
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap">
+          <div class="photo-frame">
+            <picture>
+              <source srcset="assets/profile.webp" type="image/webp">
+              <img src="assets/profile.png" alt="Portrait photograph of Helen Hembadoon Sawuan" width="500" height="500" fetchpriority="high">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT ME SECTION -->
+    <section class="section section-alt" id="about" aria-labelledby="aboutTitle">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-badge">IDENTITY &amp; BACKGROUND</span>
+          <h2 id="aboutTitle" class="section-title">About Me</h2>
+          <p class="section-subtitle">Bridging corporate operations with academic cybersecurity studies at MIVA Open University.</p>
+        </header>
+
+        <div class="cards-grid">
+          <article class="card">
+            <h3 class="card-title">Biography</h3>
+            <p class="card-desc">
+              I am an energetic cybersecurity undergraduate at <strong>MIVA Open University</strong>. Concurrently working in corporate operational systems, I manage day-to-day computing workflows while studying modern web architecture and cyber defense.
+            </p>
+            <p class="card-desc">
+              Originating from <strong>Benue State</strong> in Nigeria's Middle Belt region, I am the fourth of five children in my family. That background built my steadfast discipline, curiosity, and problem-solving focus.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 class="card-title">Educational Background</h3>
+            <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.92rem; color: var(--c-text-muted);">
+              <li><strong>BSc Cybersecurity (In Progress):</strong> MIVA Open University. Core courses include Web Technologies (COS 106), Cyber Fundamentals (CYB 101), and Discrete Math (MTH 102).</li>
+              <li><strong>SSCE High School Certificate:</strong> Distinction in physical sciences and foundational computer studies in Benue State.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3 class="card-title">Career Aspirations</h3>
+            <ul style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.92rem; color: var(--c-text-muted);">
+              <li>Become an enterprise Information Security &amp; Cyber Defense Architect.</li>
+              <li>Safeguard corporate network infrastructure against intrusion and data breaches.</li>
+              <li>Achieve international security credentials (Security+, CEH, CISSP).</li>
+            </ul>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="about.html" class="btn btn-secondary">
+            Read Full Biography &amp; Hobbies &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. TECHNICAL SKILLS -->
+    <section class="section" id="skills" aria-labelledby="skillsTitle">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-badge">TECHNICAL COMPETENCIES</span>
+          <h2 id="skillsTitle" class="section-title">Technical Skills</h2>
+          <p class="section-subtitle">Core web technologies and security skills developed through coursework and corporate practice.</p>
+        </header>
+
+        <div class="cards-grid">
+          <!-- Web Tech -->
+          <div class="card">
+            <h3 class="card-title">Web Technologies (COS 106)</h3>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div class="skill-bar-wrap">
+                <div class="skill-info"><span>Semantic HTML5</span><span>95%</span></div>
+                <div class="meter-bg"><div class="meter-fill" style="width: 95%;"></div></div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-info"><span>CSS3 Grid &amp; Flexbox</span><span>90%</span></div>
+                <div class="meter-bg"><div class="meter-fill" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-info"><span>JavaScript (DOM &amp; Events)</span><span>85%</span></div>
+                <div class="meter-bg"><div class="meter-fill" style="width: 85%;"></div></div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-info"><span>Client Form Validation (RegEx)</span><span>88%</span></div>
+                <div class="meter-bg"><div class="meter-fill" style="width: 88%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cybersecurity -->
+          <div class="card">
+            <h3 class="card-title">Cybersecurity &amp; Systems</h3>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div class="skill-bar-wrap">
+                <div class="skill-info"><span>InfoSec Fundamentals</span><span>85%</span></div>
+                <div class="meter-bg"><div class="meter-fill" style="width: 85%;"></div></div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-info"><span>TCP/IP &amp; Network Protocols</span><span>82%</span></div>
+                <div class="meter-bg"><div class="meter-fill" style="width: 82%;"></div></div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-info"><span>Corporate Systems Admin</span><span>88%</span></div>
+                <div class="meter-bg"><div class="meter-fill" style="width: 88%;"></div></div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-info"><span>Access Control &amp; IAM</span><span>78%</span></div>
+                <div class="meter-bg"><div class="meter-fill" style="width: 78%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Professional Tools -->
+          <div class="card">
+            <h3 class="card-title">Engineering &amp; Accessibility</h3>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div class="skill-bar-wrap">
+                <div class="skill-info"><span>Web Accessibility (WCAG 2.1)</span><span>90%</span></div>
+                <div class="meter-bg"><div class="meter-fill" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-info"><span>Git &amp; GitHub Version Control</span><span>84%</span></div>
+                <div class="meter-bg"><div class="meter-fill" style="width: 84%;"></div></div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-info"><span>Browser DevTools &amp; Auditing</span><span>86%</span></div>
+                <div class="meter-bg"><div class="meter-fill" style="width: 86%;"></div></div>
+              </div>
+              <div class="skill-bar-wrap">
+                <div class="skill-info"><span>HTML Data Tables</span><span>92%</span></div>
+                <div class="meter-bg"><div class="meter-fill" style="width: 92%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FEATURED PROJECTS -->
+    <section class="section section-alt" id="projects" aria-labelledby="projectsTitle">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-badge">PRACTICAL PROJECTS</span>
+          <h2 id="projectsTitle" class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Academic and security projects complying with the 20-mark evaluation rubric.</p>
+        </header>
+
+        <div class="cards-grid">
+          <!-- Project 1 -->
+          <article class="card">
+            <div style="overflow: hidden; border-radius: var(--radius); height: 160px; background: var(--c-bg);">
+              <img src="assets/og-image.png" alt="Student Portfolio and Academic Planner Platform" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            </div>
+            <h3 class="card-title">Student Portfolio &amp; Planner Platform</h3>
+            <p class="card-desc">
+              The COS 106 practical term project featuring a responsive multi-page layout, 3-colour minimalist styling, ambient sound controls, and a complete DOM-driven task management system.
+            </p>
+            <div class="card-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">LocalStorage</span>
+            </div>
+            <div style="margin-top: auto; padding-top: 0.5rem;">
+              <a href="planner.html" class="btn btn-primary" style="width: 100%;">
+                Open Task Planner &rarr;
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="card">
+            <div style="overflow: hidden; border-radius: var(--radius); height: 160px; background: var(--c-bg);">
+              <img src="assets/profile.png" alt="Corporate Vulnerability Scanner" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            </div>
+            <h3 class="card-title">Corporate Network Vulnerability Scanner</h3>
+            <p class="card-desc">
+              Automated subnet scanner and port analyzer modeling corporate security audits, service banner identification, and defensive remediation reports.
+            </p>
+            <div class="card-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Sockets</span>
+              <span class="tag">Security Audit</span>
+            </div>
+            <div style="margin-top: auto; padding-top: 0.5rem;">
+              <a href="projects.html#proj-2" class="btn btn-secondary" style="width: 100%;">
+                View Project Case Study &rarr;
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="card">
+            <div style="overflow: hidden; border-radius: var(--radius); height: 160px; background: var(--c-bg);">
+              <img src="assets/og-image.png" alt="Secure Authentication Portal Prototype" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            </div>
+            <h3 class="card-title">Secure Authentication Portal Prototype</h3>
+            <p class="card-desc">
+              Interactive authentication prototype demonstrating client-side password entropy scoring, input sanitization against XSS, and session timeouts.
+            </p>
+            <div class="card-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Web Crypto</span>
+              <span class="tag">Input Sanitization</span>
+            </div>
+            <div style="margin-top: auto; padding-top: 0.5rem;">
+              <a href="projects.html#proj-3" class="btn btn-secondary" style="width: 100%;">
+                View Architecture &rarr;
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. INTERACTIVE ACADEMIC PLANNER -->
+    <section class="section" id="planner" aria-labelledby="plannerTitle">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-badge">COS 106 PRACTICAL COMPONENT</span>
+          <h2 id="plannerTitle" class="section-title">Interactive Academic Planner</h2>
+          <p class="section-subtitle">Add coursework tasks, toggle completion, and delete tasks in real-time with full LocalStorage persistence.</p>
+        </header>
+
+        <div class="planner-box">
+          <!-- Real-time Stats -->
+          <div class="stats-bar">
+            <div class="stat-item">
+              <div id="statTotalTasks" class="stat-val">4</div>
+              <div class="stat-name">Total Tasks</div>
+            </div>
+            <div class="stat-item">
+              <div id="statCompletedTasks" class="stat-val">1</div>
+              <div class="stat-name">Completed</div>
+            </div>
+            <div class="stat-item">
+              <div id="statPendingTasks" class="stat-val">3</div>
+              <div class="stat-name">Pending</div>
+            </div>
+            <div class="stat-item">
+              <div id="statCompletionRate" class="stat-val">25%</div>
+              <div class="stat-name">Progress</div>
+            </div>
+          </div>
+
+          <!-- Add Task Form -->
+          <form id="plannerTaskForm" class="planner-form" novalidate>
+            <div class="planner-form-grid">
+              <div>
+                <label for="taskTitleInput" class="form-label">Task / Assignment Title</label>
+                <input type="text" id="taskTitleInput" class="form-input" placeholder="e.g. Complete COS 106 Term Project" required>
+              </div>
+
+              <div>
+                <label for="taskCourseInput" class="form-label">Course Code</label>
+                <input type="text" id="taskCourseInput" class="form-input" value="COS 106">
+              </div>
+
+              <div>
+                <label for="taskDueDateInput" class="form-label">Due Date</label>
+                <input type="date" id="taskDueDateInput" class="form-input" value="2026-11-20">
+              </div>
+
+              <div>
+                <label for="taskPriorityInput" class="form-label">Priority</label>
+                <select id="taskPriorityInput" class="form-input">
+                  <option value="High">High</option>
+                  <option value="Medium" selected>Medium</option>
+                  <option value="Low">Low</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="height: 38px;">
+                Add Task
+              </button>
+            </div>
+          </form>
+
+          <!-- Filter Toolbar -->
+          <div class="filter-row">
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button type="button" class="filter-btn active" data-filter="all">All Tasks</button>
+              <button type="button" class="filter-btn" data-filter="pending">Pending</button>
+              <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+              <button type="button" class="filter-btn" data-filter="high">High Priority</button>
+            </div>
+            <div style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--c-text-muted);">
+              Saved to Browser LocalStorage
+            </div>
+          </div>
+
+          <!-- Dynamic Task List -->
+          <div id="plannerTaskList" class="task-list" role="list" aria-label="Course Task List">
+            <!-- Rendered by js/planner.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. ACADEMIC COURSE TIMETABLE TABLE -->
+    <section class="section section-alt" id="schedule" aria-labelledby="scheduleTitle">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-badge">HTML TABLE DEMONSTRATION</span>
+          <h2 id="scheduleTitle" class="section-title">Academic Schedule &amp; Assessment Table</h2>
+          <p class="section-subtitle">Course timetable and assessment scheme for Helen at MIVA Open University.</p>
+        </header>
+
+        <div class="table-wrap">
+          <table summary="Registered course schedule and continuous assessment weighting">
+            <thead>
+              <tr>
+                <th scope="col">Code</th>
+                <th scope="col">Course Title</th>
+                <th scope="col">Credits</th>
+                <th scope="col">Assessment Breakdown</th>
+                <th scope="col">Lecture Slot</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>COS 106</strong></td>
+                <td>Introduction to Web Technologies</td>
+                <td>3 Units</td>
+                <td>Practical Term Project (20 Marks) + Final Exam (80 Marks)</td>
+                <td>Tuesday 10:00 - 12:00</td>
+                <td>Enrolled</td>
+              </tr>
+              <tr>
+                <td><strong>CYB 101</strong></td>
+                <td>Fundamentals of Cybersecurity</td>
+                <td>3 Units</td>
+                <td>Lab Practicals (30 Marks) + Final Exam (70 Marks)</td>
+                <td>Wednesday 14:00 - 16:00</td>
+                <td>Enrolled</td>
+              </tr>
+              <tr>
+                <td><strong>MTH 102</strong></td>
+                <td>Discrete Mathematics for Computing</td>
+                <td>3 Units</td>
+                <td>Quizzes (20 Marks) + Final Exam (80 Marks)</td>
+                <td>Thursday 09:00 - 11:00</td>
+                <td>Enrolled</td>
+              </tr>
+              <tr>
+                <td><strong>GST 101</strong></td>
+                <td>Use of English &amp; Communication</td>
+                <td>2 Units</td>
+                <td>Continuous Assessment (40 Marks) + Exam (60 Marks)</td>
+                <td>Friday 11:00 - 13:00</td>
+                <td>Enrolled</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT SECTION -->
+    <section class="section" id="contact" aria-labelledby="contactTitle">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-badge">CONTACT PORTAL</span>
+          <h2 id="contactTitle" class="section-title">Get in Touch</h2>
+          <p class="section-subtitle">Have a question or opportunity? Transmit a message using the validated form below.</p>
+        </header>
+
+        <div class="contact-layout">
+          <!-- Direct Details -->
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div class="card">
+              <h3 class="card-title">Student Email</h3>
+              <p class="card-desc"><a href="mailto:helen.sawuan@miva.university">helen.sawuan@miva.university</a></p>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Telephone</h3>
+              <p class="card-desc">+234 812 345 6789</p>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title">Location &amp; Origin</h3>
+              <p class="card-desc">Benue State / MIVA Open University, Nigeria</p>
+            </div>
+
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                GitHub
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                LinkedIn
+              </a>
+            </div>
+          </div>
+
+          <!-- COS 106 Validated Form -->
+          <div class="card">
+            <h3 class="card-title">Send a Message</h3>
+            <p style="font-size: 0.85rem; color: var(--c-text-muted); margin-bottom: 1rem;">
+              JavaScript validation ensures: (1) No field empty, (2) Valid email, (3) Phone number contains only digits.
+            </p>
+
+            <form id="contactForm" novalidate style="display: flex; flex-direction: column; gap: 1rem;">
+              <div>
+                <label for="contactName" class="form-label">Full Name *</label>
+                <input type="text" id="contactName" class="form-input" placeholder="Your Full Name" required>
+                <span id="nameError" class="field-error" role="alert"></span>
+              </div>
+
+              <div>
+                <label for="contactEmail" class="form-label">Email Address *</label>
+                <input type="email" id="contactEmail" class="form-input" placeholder="name@domain.com" required>
+                <span id="emailError" class="field-error" role="alert"></span>
+              </div>
+
+              <div>
+                <label for="contactPhone" class="form-label">Phone Number (Digits only) *</label>
+                <input type="tel" id="contactPhone" class="form-input" placeholder="08123456789" required>
+                <span id="phoneError" class="field-error" role="alert"></span>
+              </div>
+
+              <div>
+                <label for="contactMessage" class="form-label">Message *</label>
+                <textarea id="contactMessage" class="form-input" rows="4" placeholder="Your message..." required></textarea>
+                <span id="messageError" class="field-error" role="alert"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Validate &amp; Send Message
+              </button>
+
+              <div id="contactFeedback" class="form-alert" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p style="margin-bottom: 0.5rem;">
+        &copy; 2026 Helen Hembadoon Sawuan • COS 106 Term Project (20 Marks) • MIVA Open University
+      </p>
+      <p style="font-size: 0.8rem;">
+        Three-Colour System • Semantic HTML5 • CSS3 Grid/Flexbox • Vanilla JavaScript
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/audio-player.js"></script>
+  <script src="js/planner.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
