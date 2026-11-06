@@ -120,5 +120,5 @@ npm test
 ## Personalization Checklist for Submission
 
 - **Contact Phone / Email:** Modify [`content.json`](file:///g:/My%20Drive/miva/OTHER%20STUDENTS/Helen/CSC%20106/content.json) with Helen's preferred contact info before final submission.
-- **GitHub / LinkedIn Handles:** Update URLs in `content.json` to link directly to Helen's live profiles.
+- **Student Email:** `h.dzauka6193@miva.edu.ng`
 - **Hosting:** Run `npm run build` and push the repository to GitHub to activate GitHub Pages or Vercel.
