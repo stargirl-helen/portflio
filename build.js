@@ -73,7 +73,7 @@ function buildToDirectory(targetDir) {
   fs.mkdirSync(path.join(targetDir, 'js'), { recursive: true });
   fs.mkdirSync(path.join(targetDir, 'assets'), { recursive: true });
 
-  const rootFiles = ['index.html', 'about.html', 'projects.html', 'planner.html', 'contact.html', 'content.json'];
+  const rootFiles = ['index.html', 'about.html', 'projects.html', 'planner.html', 'contact.html', 'content.json', '.nojekyll'];
   for (const f of rootFiles) {
     const src = path.join(ROOT_DIR, f);
     const dest = path.join(targetDir, f);
